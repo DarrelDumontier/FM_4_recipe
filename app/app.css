@@ -1,15 +1,115 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Outfit", sans-serif;
+  --font-serif: "Young Serif", serif;
+
+  
+
+  --color-app-stone-100: hsl(30, 54%, 90%);
+  --color-app-stone-150: hsl(30, 18%, 87%);
+  --color-app-stone-600: hsl(30, 10%, 34%);
+  --color-app-stone-900: hsl(24, 5%, 18%);
+  --color-app-brown-800: hsl(14, 45%, 36%);
+  --color-app-rose-800: hsl(332, 51%, 32%);
+  --color-app-rose-50: hsl(330, 100%, 98%);
+
+
+
+
+  
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply
+    min-w-full flex justify-center
+    sm:my-8
+  bg-stone-200 text-stone-600
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+article.recipe {
+
+  section {
+    @apply
+      my-8
   }
+ 
+
+  h1 {
+    @apply
+      text-[2.5rem] leading-8 
+      font-serif    
+       my-5
+  }
+
+  .InfoBox {
+    @apply
+      w-full mt-6 p-5
+      bg-rose-50    
+  }
+
+  .InfoBox span {
+        @apply
+        text-[1.25rem] leading-5
+        font-serif  text-rose-800 
+      }
+      
+ 
+
+    
+    
+  
+
+  h2 {
+    @apply
+      text-[1.8rem] leading-8
+       font-serif text-rose-800
+      my-5
+  }
+
+  ul {
+    @apply
+     
+      list-outside   ml-7
+      list-disc  marker:text-rose-800
+    
+  }
+  ol {
+    @apply
+      ml-7
+      list-decimal 
+  }
+
+    li {
+      @apply
+        pl-4 mt-3
+    }
+  strong {
+      @apply
+        mr-1
+  }
+  table {
+    @apply
+       w-[70%] mx-auto mt-5
+      text-left
+      border-collapse divide-y divide-dashed divide-gray-300
+      
+  }
+   tbody {
+    @apply         
+      border-collapse divide-y divide-dashed divide-gray-300
+  }
+
+  th {
+    @apply      
+      py-2
+      font-normal
+  }
+
+  td {
+    @apply
+      text-orange-800
+  }
+  
 }
